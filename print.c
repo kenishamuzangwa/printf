@@ -5,22 +5,18 @@
  * @format: format specifier
  * Return: no of bytes printed
  */
-
 int _printf(const char *format, ...)
 {
 	unsigned int i;
 	int count = 0;
 	int count_strings;
-
 	va_list args;
 
-	if (format == NULL)
+	if (!format || !format[0])
 	{
 		return (-1);
 	}
-
 	va_start(args, format);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
@@ -43,8 +39,12 @@ int _printf(const char *format, ...)
 			m_putchar('%');
 			i++;
 		}
+		else if ((format[i + 1] == 'd') || (format[i + 1] == 'i'))
+		{
+			get_int(va_arg(args, int));
+			i++;
+		}
 		count += 1;
 	}
-	va_end(args);
 	return (count);
 }
