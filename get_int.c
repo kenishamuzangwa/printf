@@ -5,13 +5,13 @@
  *
  * 0num: int
  * Return: number of bytes
- * */
+ */
 
- void int_get(int num)
- {
- int j;
+void int_get(int num)
+{
+int j;
 
- 	if (num == 0)
+	if (num == 0)
 	return;
 
 	j = num / 10;
