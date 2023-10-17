@@ -9,13 +9,16 @@
 int my_puts(char *c)
 {
 	int list = 0;
+	int d_value = 0;
 
 	if (c)
 	{
-		for (list = 0; c[list] != '\0'; list++)
+		while (c[list] != '\0')
 		{
 			m_putchar(c[list]);
+			d_value += 1;
+			list++;
 		}
 	}
-	return (list);
+	return (d_value);
 }
