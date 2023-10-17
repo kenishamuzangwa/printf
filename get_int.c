@@ -3,7 +3,7 @@
 /**
  * int_get - print intergers
  *
- * 0num: int
+ * @num: int
  * Return: number of bytes
  */
 
