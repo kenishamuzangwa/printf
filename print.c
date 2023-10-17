@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int count_strings;
 	va_list args;
 
-	if (!format || !format[0])
+	if (format == NULL)
 	{
 		return (-1);
 	}
