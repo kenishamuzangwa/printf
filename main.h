@@ -7,7 +7,7 @@
 int m_putchar(char c);
 int _printf(const char *format, ...);
 int my_puts(char *c);
-void int_get(int num);
+int int_get(int num);
 
 
 #endif
